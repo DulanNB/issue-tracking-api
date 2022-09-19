@@ -73,6 +73,11 @@ class IssueController extends Controller
     }
 
 
+    /**
+     * @param IssueUpdateRequest $request
+     * @param Issues $issue
+     * @return Application|ResponseFactory|Response
+     */
     public function update(IssueUpdateRequest $request, Issues $issue)
     {
         $issue->update($request->validated());
